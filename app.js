@@ -7,10 +7,10 @@ let operasi = "";
 for(let i = 0; i < nilai.length; i++) {
     console.log(nilai[i].innerText);
     nilai[i].addEventListener("click", function() {
-        if (nilai[i].innerText === "+" || nilai[i].innerText === "-" || nilai[i].innerText === "*" || nilai[i].innerText === "/") {
+        if (nilai[i].innerText === "+" || nilai[i].innerText === "-" || nilai[i].innerText === "x" || nilai[i].innerText === "/") {
             operasi = nilai[i].innerText;
             angka1 = input.value;
-            input.value = "0";
+            input.value = 0;
         } else if (nilai[i].innerText === "=") {
             angka2 = input.value;
 
@@ -18,7 +18,7 @@ for(let i = 0; i < nilai.length; i++) {
                 input.value = parseInt(angka1) + parseInt(angka2);
             if (operasi === "-")
                 input.value = parseInt(angka1) - parseInt(angka2);
-            if (operasi === "*")
+            if (operasi === "x")
                 input.value = parseInt(angka1) * parseInt(angka2);
             if (operasi === "/")
                 input.value = parseInt(angka1) / parseInt(angka2);
